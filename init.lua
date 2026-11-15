@@ -1,3 +1,5 @@
+-- .h files are c files
+vim.filetype.add { extension = { h = 'c' } }
 -- Set tab options
 vim.opt.tabstop = 2 -- A tab character displays as 2 spaces
 vim.opt.shiftwidth = 2 -- Indentation uses 2 spaces
@@ -704,10 +706,11 @@ require('lazy').setup({
       },
       formatters = {
         clang_format = {
-        command = "clang-format",
-        append_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 2}" },
+          command = 'clang-format',
+          append_args = { '--style={BasedOnStyle: LLVM, IndentWidth: 2}' },
         },
       },
+    },
   },
 
   { -- Autocompletion
